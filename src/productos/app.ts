@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let a = document.getElementById("ingresar") as HTMLAnchorElement;
   if (username) {
     a.textContent = "Cerrar sesión";
-    a.href = "../../index.html";
   }
   a.addEventListener("click", () => {
     if (username) {
