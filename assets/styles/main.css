@@ -1,0 +1,195 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+nav ul .dropdown:hover > a {
+  background-color: #555;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu li a {
+  padding: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+  padding: 1em;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+ul li strong {
+  color: #333;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+  height: 60px;
+  line-height: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info {
+  text-align: left;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-icon {
+  margin: 0 0.5em;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  margin-top: 0.5em;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}

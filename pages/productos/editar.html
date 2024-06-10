@@ -1,0 +1,59 @@
+<div
+  class="modal fade"
+  id="editProductModal"
+  tabindex="-1"
+  aria-labelledby="addProductModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editProductModalLabel">Editar Producto</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="editproductForm">
+          <div class="mb-3">
+            <input type="text" id="idproducto" hidden />
+            <label for="productName" class="form-label"
+              >Nombre del Producto</label
+            >
+            <input type="text" class="form-control" id="editname" required />
+          </div>
+          <div class="mb-3">
+            <label for="productDescription" class="form-label"
+              >Descripción</label
+            >
+            <textarea
+              class="form-control"
+              id="editdescription"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="productPrice" class="form-label">Precio</label>
+            <input
+              type="number"
+              class="form-control"
+              id="editprecio"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="productImage" class="form-label"
+              >URL de la Imagen</label
+            >
+            <input type="url" class="form-control" id="editimagen" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Editar Producto</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

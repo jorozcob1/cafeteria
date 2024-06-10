@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café El Encanto</title>
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+  </head>
+
+  <body>
+    <header class="menu-header">
+      <div class="logo">
+        <img src="../assets/images/Logo.webp" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/pages/productos/productos.html">Productos</a></li>
+          <li><a href="/pages/contacto.html">Contacto</a></li>
+          <li><a id="ingresar" href="/pages/logg.html">Ingresar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="contact">
+        <h1>Contacto</h1>
+        <form id="formularioContacto">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" required />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+      <script type="module" src="../dist/productos/app.js"></script>
+    </main>
+  </body>
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>
+        Derechos de autor &copy; 2024 Café El Encanto. Todos los derechos
+        reservados.
+      </p>
+      <p>Fecha de presentación: 07/06/2024</p>
+    </div>
+  </footer>
+</html>

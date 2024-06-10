@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café El Encanto</title>
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="menu-header">
+      <div class="logo">
+        <img src="../../assets/images/Logo.webp" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="../../pages/contacto.html">Contacto</a></li>
+          <li><a id="ingresar" href="../../pages/logg.html">Ingresar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="intro">
+        <h1>Productos</h1>
+        <button
+          id="addProductButton"
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#addProductModal"
+        >
+          Agregar Producto
+        </button>
+
+        <div id="productos-container" class="d-flex flex-wrap">
+          <!-- Aquí se agregarán las tarjetas de productos -->
+        </div>
+
+        <!-- Modal Agregar-->
+        <div
+          class="modal fade"
+          id="addProductModal"
+          tabindex="-1"
+          aria-labelledby="addProductModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addProductModalLabel">
+                  Agregar Producto
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="productForm">
+                  <div class="mb-3">
+                    <label for="productName" class="form-label"
+                      >Nombre del Producto</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="productName"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="productDescription" class="form-label"
+                      >Descripción</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="productDescription"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="productPrice" class="form-label">Precio</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="productPrice"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="productImage" class="form-label"
+                      >URL de la Imagen</label
+                    >
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="productImage"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Agregar Producto
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Editar-->
+        <div id="modalEditar"></div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="../../dist/productos/logica_productos.js"
+    ></script>
+    <script type="module" src="../../dist/productos/app.js"></script>
+  </body>
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>
+        Derechos de autor &copy; 2024 Café El Encanto. Todos los derechos
+        reservados.
+      </p>
+      <p>Fecha de presentación: 07/06/2024</p>
+    </div>
+  </footer>
+</html>
