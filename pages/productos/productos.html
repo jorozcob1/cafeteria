@@ -16,20 +16,50 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header class="menu-header">
-      <div class="logo">
-        <img src="../../assets/images/Logo.webp" alt="Logo" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="../../pages/contacto.html">Contacto</a></li>
-          <li><a id="ingresar" href="../../pages/logg.html">Ingresar</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light submenu">
+        <div class="logo">
+          <img src="/assets/images/Logo.webp" alt="Logo" />
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/productos/productos.html"
+                >Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="ingresar" href="/pages/logg.html"
+                >Ingresar</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -60,6 +90,9 @@
       src="../../dist/productos/logica_productos.js"
     ></script>
     <script type="module" src="../../dist/productos/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
   <footer class="footer">
     <div class="footer-bottom">

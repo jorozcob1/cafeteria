@@ -1,0 +1,84 @@
+:root {
+  /* claro */
+  --c-claro-background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  --c-claro-checkbox: #fce100;
+  /* oscuro */
+  --c-oscuro-background: linear-gradient(
+      to bottom,
+      rgba(26, 14, 14, 0.15) 0%,
+      rgba(17, 11, 11, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  --c-daroscuro-checkbox: #757575;
+}
+
+.contenedor-oscuro {
+  --c-background: var(--c-oscuro-background);
+  --c-checkbox: var(--c-oscuro-checkbox);
+  background: var(--c-background);
+  background-blend-mode: multiply, multiply;
+  transition: 0.4s;
+}
+
+.contenedor-oscuro.claro {
+  --c-background: var(--c-claro-background);
+  --c-checkbox: var(--c-claro-checkbox);
+  background: var(--c-background);
+}
+
+/* el interruptor - the box redonda del deslizador */
+
+.caja-interruptor {
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+}
+
+/* esconder el HTML checkbox */
+
+.caja-interruptor .icono-interruptor {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* el deslizador */
+
+.deslizador {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--c-checkbox);
+  transition: 0.4s;
+  width: 25px;
+}
+
+.deslizador:before {
+  position: absolute;
+  content: "🌑";
+  height: 0px;
+  width: 0px;
+  left: 20px;
+  top: 0px;
+  line-height: 0px;
+  transition: 0.4s;
+}
+
+.icono-interruptor:checked + .deslizador:before {
+  left: 4px;
+  content: "🌞​";
+}
+
+.icono-interruptor:checked + .deslizador:before {
+  transform: translateX(40px);
+}

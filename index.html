@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café El Encanto</title>
     <link rel="stylesheet" href="assets/styles/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-jgSp6GzopM6Xr5HzZvWDgZy/q8MK6AkL8zNY+KGawZmLVT0ujR9TKVyd4meZKkC3YFr7BwS2ivbw8owIuR6tuw=="
-      crossorigin="anonymous"
-    />
-  </head>
+    <link rel="stylesheet" href="assets/styles/animacion1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-jgSp6GzopM6Xr5HzZvWDgZy/q8MK6AkL8zNY+KGawZmLVT0ujR9TKVyd4meZKkC3YFr7BwS2ivbw8owIuR6tuw==" crossorigin="anonymous" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-  <body>
+<body>
     <header class="menu-header">
-      <div class="logo">
-        <img src="assets/images/Logo.webp" alt="Logo" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pages/productos/productos.html">Productos</a></li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
-          <li><a id="ingresar" href="pages/logg.html">Ingresar</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-light submenu">
+            <div class="logo">
+                <img src="assets/images/Logo.webp" alt="Logo" />
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/productos/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="ingresar" href="pages/logg.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main>
-      <section id="intro">
-        <h1>Café El Encanto</h1>
-        <h2>Tu lugar favorito para disfrutar de un buen café</h2>
-        <p>
-          En Café El Encanto, nos esforzamos por ofrecerte una experiencia única
-          de café. Nos enorgullece servir una amplia variedad de cafés de alta
-          calidad, desde espresso hasta cafés de especialidad de todo el mundo.
-          Nuestra misión es crear un ambiente acogedor y relajado donde puedas
-          disfrutar de tu bebida favorita, ya sea solo o en compañía de amigos y
-          familiares.
-        </p>
-      </section>
-      <section id="objectives">
-        <h2>Nuestros Objetivos</h2>
-        <ul>
-          <li>
-            <strong>Excelencia en el Café y Postres:</strong> Comprometidos a
-            proporcionar la mejor calidad en cada taza de café y en cada bocado
-            de nuestros deliciosos postres, garantizando una experiencia
-            gastronómica excepcional para nuestros clientes.
-          </li>
-          <li>
-            <strong>Variedad de Ofertas:</strong> Ofrecemos una amplia selección
-            de cafés de especialidad, desde el clásico espresso hasta
-            innovadoras combinaciones de sabores, junto con una variedad
-            tentadora de postres caseros, desde pasteles y tartas hasta helados
-            y muffins, para satisfacer los paladares más exigentes.
-          </li>
-          <li>
-            <strong>Experiencia Personalizada:</strong> Nos esforzamos por crear
-            experiencias únicas y personalizadas para cada cliente, adaptando
-            nuestras ofertas de café y postres según sus gustos y preferencias,
-            y asegurándonos de que cada visita a nuestra cafetería sea
-            memorable.
-          </li>
-          <li>
-            <strong>Servicio Atento:</strong> Nuestro equipo está dedicado a
-            brindar un servicio cálido, amable y atento a cada cliente,
-            asegurando que se sientan bienvenidos y atendidos en todo momento
-            mientras disfrutan de nuestras delicias.
-          </li>
-        </ul>
-      </section>
-      <section id="functionalities">
-        <h2>Nuestras Funcionalidades en el Sitio Web</h2>
-        <ul>
-          <li>
-            <strong>Exploración del Menú:</strong> Presentamos de manera
-            detallada nuestro menú de cafés y postres disponibles para que los
-            clientes puedan explorar y elegir sus favoritos.
-          </li>
-          <li>
-            <strong>Formulario de Contacto:</strong> Facilitamos la comunicación
-            con nuestros clientes a través de un formulario interactivo donde
-            pueden realizar consultas, enviar comentarios o solicitar
-            información adicional sobre nuestros productos y servicios.
-          </li>
-          <li>
-            <strong>Gestión de Reservas:</strong> Ofrecemos un sistema de
-            reservas en línea para que los clientes puedan reservar mesas con
-            anticipación, agilizando el proceso de visita a nuestra cafetería y
-            garantizando una experiencia sin contratiempos.
-          </li>
-        </ul>
+    <div class="contenedor-oscuro">
+        <div class="content">
+            <label class="caja-interruptor">
+          <input type="checkbox" class="icono-interruptor" />
+          <span class="deslizador"></span>
+        </label>
+            <main>
+                <section id="intro">
+                    <h1>Café El Encanto</h1>
+                    <h2>Tu lugar favorito para disfrutar de un buen café</h2>
+                    <p>
+                        En Café El Encanto, nos esforzamos por ofrecerte una experiencia única de café. Nos enorgullece servir una amplia variedad de cafés de alta calidad, desde espresso hasta cafés de especialidad de todo el mundo. Nuestra misión es crear un ambiente acogedor
+                        y relajado donde puedas disfrutar de tu bebida favorita, ya sea solo o en compañía de amigos y familiares.
+                    </p>
+                </section>
+                <section id="objectives">
+                    <h2>Nuestros Objetivos</h2>
+                    <ul>
+                        <li>
+                            <strong>Excelencia en el Café y Postres:</strong> Comprometidos a proporcionar la mejor calidad en cada taza de café y en cada bocado de nuestros deliciosos postres, garantizando una experiencia gastronómica excepcional para
+                            nuestros clientes.
+                        </li>
+                        <li>
+                            <strong>Variedad de Ofertas:</strong> Ofrecemos una amplia selección de cafés de especialidad, desde el clásico espresso hasta innovadoras combinaciones de sabores, junto con una variedad tentadora de postres caseros, desde
+                            pasteles y tartas hasta helados y muffins, para satisfacer los paladares más exigentes.
+                        </li>
+                        <li>
+                            <strong>Experiencia Personalizada:</strong> Nos esforzamos por crear experiencias únicas y personalizadas para cada cliente, adaptando nuestras ofertas de café y postres según sus gustos y preferencias, y asegurándonos de que
+                            cada visita a nuestra cafetería sea memorable.
+                        </li>
+                        <li>
+                            <strong>Servicio Atento:</strong> Nuestro equipo está dedicado a brindar un servicio cálido, amable y atento a cada cliente, asegurando que se sientan bienvenidos y atendidos en todo momento mientras disfrutan de nuestras delicias.
+                        </li>
+                    </ul>
+                </section>
+                <section id="functionalities">
+                    <h2>Nuestras Funcionalidades en el Sitio Web</h2>
+                    <ul>
+                        <li>
+                            <strong>Exploración del Menú:</strong> Presentamos de manera detallada nuestro menú de cafés y postres disponibles para que los clientes puedan explorar y elegir sus favoritos.
+                        </li>
+                        <li>
+                            <strong>Formulario de Contacto:</strong> Facilitamos la comunicación con nuestros clientes a través de un formulario interactivo donde pueden realizar consultas, enviar comentarios o solicitar información adicional sobre nuestros
+                            productos y servicios.
+                        </li>
+                        <li>
+                            <strong>Gestión de Reservas:</strong> Ofrecemos un sistema de reservas en línea para que los clientes puedan reservar mesas con anticipación, agilizando el proceso de visita a nuestra cafetería y garantizando una experiencia
+                            sin contratiempos.
+                        </li>
+                    </ul>
 
-        <div id="listaProductos"></div>
-      </section>
-
-      <script type="module" src="dist/productos/app.js"></script>
-    </main>
-  </body>
-  <footer class="footer">
+                    <div id="listaProductos"></div>
+                </section>
+                <script type="module" src="dist/animaciones/animacion1.js"></script>
+                <script type="module" src="dist/productos/app.js"></script>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </main>
+        </div>
+</body>
+<footer class="footer">
     <div class="footer-bottom">
-      <p>
-        Derechos de autor &copy; 2024 Café El Encanto. Todos los derechos
-        reservados.
-      </p>
-      <p>Fecha de presentación: 07/06/2024</p>
+        <p>
+            Derechos de autor &copy; 2024 Café El Encanto. Todos los derechos reservados.
+        </p>
+        <p>Fecha de presentación: 07/06/2024</p>
     </div>
-  </footer>
+</footer>
+
 </html>
