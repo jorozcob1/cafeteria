@@ -1,5 +1,5 @@
 import { Productos } from "./products.js";
-declare var bootstrap: any;
+
 const product: Productos = new Productos();
 const username = localStorage.getItem("username");
 
@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let a = document.getElementById("ingresar") as HTMLAnchorElement;
   if (username) {
     a.textContent = "Cerrar sesión";
+    a.href = "../../index.html";
   }
   a.addEventListener("click", () => {
     if (username) {
@@ -39,41 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = event.target as HTMLButtonElement;
       const buttonId = target.getAttribute("data-idE");
       //console.log(`Button clicked: ${buttonId}`);
-      handleButtonClick(buttonId);
+      botonEliminar(buttonId);
     });
   });
 });
 /////////////////////////////////////////////////////
-function handleButtonClick(id: string | null) {
+function botonEliminar(id: string | null) {
   // Lógica para manejar el clic del botón basado en el ID
   if (id) {
     // console.log(`Button with ID ${id} was clicked.`);
     product.eliminarProducto(parseInt(id));
     //recargar la pagina sin load
+    location.reload();
   }
 }
-///Manejo del formulario de productos insertados
-document
-  .getElementById("productForm")!
-  .addEventListener("submit", function (event) {
-    product.guardarProducto({
-      id: product.numeroProductos(),
-      name: (document.getElementById("productName") as HTMLInputElement).value,
-      description: (
-        document.getElementById("productDescription") as HTMLTextAreaElement
-      ).value,
-      price: parseFloat(
-        (document.getElementById("productPrice") as HTMLInputElement).value
-      ),
-      image: (document.getElementById("productImage") as HTMLInputElement)
-        .value,
-    });
-
-    (this as HTMLFormElement).reset();
-    const modalElement = document.querySelector(
-      "#addProductModal"
-    ) as HTMLElement;
-    const modal = bootstrap.Modal.getInstance(modalElement);
-    if (modal) modal.hide();
-  });
-//test

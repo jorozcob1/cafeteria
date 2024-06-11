@@ -4,14 +4,25 @@ productos.renderProductos();
 document.addEventListener("DOMContentLoaded", () => {
   //load modal editar
   const modal = document.getElementById("modalEditar")! as HTMLDivElement;
+  const modalAgregar = document.getElementById(
+    "modalAgregar"
+  )! as HTMLDivElement;
+  //insertar modal editar
   fetch("/pages/productos/editar.html")
     .then((response) => response.text())
     .then((data) => {
       modal.innerHTML = data;
       editar();
     });
+  //insertar modal agregar
+  fetch("/pages/productos/agregar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      modalAgregar.innerHTML = data;
+      agregarProducto();
+    });
 
-  //editar producto
+  //agregar boton editar a cada producto
   const buttons = document.querySelectorAll(
     ".btn-edit"
   ) as NodeListOf<HTMLButtonElement>;
@@ -69,5 +80,35 @@ function editar(): void {
       });
 
       (this as HTMLFormElement).reset();
+    });
+}
+// funcion para agregar producto
+function agregarProducto(): void {
+  ///Manejo del formulario de productos insertados
+  var bootstrap: any;
+  const product: Productos = new Productos();
+  document
+    .getElementById("productForm")!
+    .addEventListener("submit", function (event) {
+      product.guardarProducto({
+        id: product.numeroProductos(),
+        name: (document.getElementById("productName") as HTMLInputElement)
+          .value,
+        description: (
+          document.getElementById("productDescription") as HTMLTextAreaElement
+        ).value,
+        price: parseFloat(
+          (document.getElementById("productPrice") as HTMLInputElement).value
+        ),
+        image: (document.getElementById("productImage") as HTMLInputElement)
+          .value,
+      });
+
+      (this as HTMLFormElement).reset();
+      const modalElement = document.querySelector(
+        "#addProductModal"
+      ) as HTMLElement;
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      if (modal) modal.hide();
     });
 }

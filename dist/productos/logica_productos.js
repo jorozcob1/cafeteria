@@ -4,13 +4,22 @@ productos.renderProductos();
 document.addEventListener("DOMContentLoaded", () => {
     //load modal editar
     const modal = document.getElementById("modalEditar");
+    const modalAgregar = document.getElementById("modalAgregar");
+    //insertar modal editar
     fetch("/pages/productos/editar.html")
         .then((response) => response.text())
         .then((data) => {
         modal.innerHTML = data;
         editar();
     });
-    //editar producto
+    //insertar modal agregar
+    fetch("/pages/productos/agregar.html")
+        .then((response) => response.text())
+        .then((data) => {
+        modalAgregar.innerHTML = data;
+        agregarProducto();
+    });
+    //agregar boton editar a cada producto
     const buttons = document.querySelectorAll(".btn-edit");
     buttons.forEach((button) => {
         button.addEventListener("click", (event) => {
@@ -53,5 +62,29 @@ function editar() {
             image,
         });
         this.reset();
+    });
+}
+// funcion para agregar producto
+function agregarProducto() {
+    ///Manejo del formulario de productos insertados
+    var bootstrap;
+    const product = new Productos();
+    document
+        .getElementById("productForm")
+        .addEventListener("submit", function (event) {
+        product.guardarProducto({
+            id: product.numeroProductos(),
+            name: document.getElementById("productName")
+                .value,
+            description: document.getElementById("productDescription").value,
+            price: parseFloat(document.getElementById("productPrice").value),
+            image: document.getElementById("productImage")
+                .value,
+        });
+        this.reset();
+        const modalElement = document.querySelector("#addProductModal");
+        const modal = bootstrap.Modal.getInstance(modalElement);
+        if (modal)
+            modal.hide();
     });
 }

@@ -50,78 +50,7 @@
         </div>
 
         <!-- Modal Agregar-->
-        <div
-          class="modal fade"
-          id="addProductModal"
-          tabindex="-1"
-          aria-labelledby="addProductModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="addProductModalLabel">
-                  Agregar Producto
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form id="productForm">
-                  <div class="mb-3">
-                    <label for="productName" class="form-label"
-                      >Nombre del Producto</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="productName"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="productDescription" class="form-label"
-                      >Descripción</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="productDescription"
-                      rows="3"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="productPrice" class="form-label">Precio</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="productPrice"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="productImage" class="form-label"
-                      >URL de la Imagen</label
-                    >
-                    <input
-                      type="url"
-                      class="form-control"
-                      id="productImage"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary">
-                    Agregar Producto
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="modalAgregar"></div>
         <!-- Modal Editar-->
         <div id="modalEditar"></div>
       </section>
