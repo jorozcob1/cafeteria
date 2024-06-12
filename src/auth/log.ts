@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (username === "admin" && password === "123") {
       localStorage.setItem("username", username);
-      window.location.href = "../../index.html";
+      window.location.href = "https://agarivasc.github.io/aat1/index.html";
     } else {
       alert("Invalid username or password.");
     }

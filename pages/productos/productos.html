@@ -26,7 +26,7 @@
     <header class="menu-header">
       <nav class="navbar navbar-expand-lg navbar-light submenu">
         <div class="logo">
-          <img src="/assets/images/Logo.webp" alt="Logo" />
+          <img src="../../assets/images/Logo.webp" alt="Logo" />
         </div>
 
         <button
@@ -43,18 +43,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/index.html">Inicio</a>
+              <a class="nav-link" href="../../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/productos/productos.html"
-                >Productos</a
-              >
+              <a class="nav-link" href="productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+              <a class="nav-link" href="../../pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="ingresar" href="/pages/logg.html"
+              <a class="nav-link" id="ingresar" href="../../pages/logg.html"
                 >Ingresar</a
               >
             </li>
@@ -80,15 +78,160 @@
         </div>
 
         <!-- Modal Agregar-->
-        <div id="modalAgregar"></div>
+        <div
+          class="modal fade"
+          id="addProductModal"
+          tabindex="-1"
+          aria-labelledby="addProductModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addProductModalLabel">
+                  Agregar Producto
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="productForm">
+                  <div class="mb-3">
+                    <label for="productName" class="form-label"
+                      >Nombre del Producto</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="productName"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="productDescription" class="form-label"
+                      >Descripción</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="productDescription"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="productPrice" class="form-label">Precio</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="productPrice"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="productImage" class="form-label"
+                      >URL de la Imagen</label
+                    >
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="productImage"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Agregar Producto
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Modal Editar-->
-        <div id="modalEditar"></div>
+        <div
+          class="modal fade"
+          id="editProductModal"
+          tabindex="-1"
+          aria-labelledby="addProductModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editProductModalLabel">
+                  Editar Producto
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="editproductForm">
+                  <div class="mb-3">
+                    <input type="text" id="idproducto" hidden />
+                    <label for="productName" class="form-label"
+                      >Nombre del Producto</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editname"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="productDescription" class="form-label"
+                      >Descripción</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="editdescription"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="productPrice" class="form-label">Precio</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="editprecio"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="productImage" class="form-label"
+                      >URL de la Imagen</label
+                    >
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="editimagen"
+                      required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Editar Producto
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script
       type="module"
       src="../../dist/productos/logica_productos.js"
     ></script>
+    <script></script>
     <script type="module" src="../../dist/productos/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

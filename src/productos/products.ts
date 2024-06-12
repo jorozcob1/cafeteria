@@ -54,11 +54,9 @@ export class Productos {
           <h5 class="card-title">${producto.name}</h5>
           <p class="card-text">${producto.description}</p>
           <p class="card-text">$${producto.price.toFixed(2)}</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-
-          <button type="button" data-idE="${
-            producto.id
-          }"  class="btn btn-danger dynamic-btn">Eliminar</button>
+              <button type="button" data-idE="${
+                producto.id
+              }"  class="btn btn-danger dynamic-btn">Eliminar</button>
       
       <button
       data-idEd="${producto.id}"

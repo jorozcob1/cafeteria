@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let a = document.getElementById("ingresar") as HTMLAnchorElement;
   if (username) {
     a.textContent = "Cerrar sesión";
-    a.href = "../../index.html";
+    a.href = "/aat1/index.html";
   }
   a.addEventListener("click", () => {
     if (username) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ) as HTMLButtonElement;
     button.hidden = true;
     const btnEliminar = document.getElementsByClassName(
-      "btn-danger"
+      "btn"
     ) as HTMLCollectionOf<HTMLButtonElement>;
 
     for (let i = 0; i < btnEliminar.length; i++) {

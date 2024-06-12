@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .value;
         if (username === "admin" && password === "123") {
             localStorage.setItem("username", username);
-            window.location.href = "../../index.html";
+            window.location.href = "https://jorozcob1.github.io/at/index.html";
         }
         else {
             alert("Invalid username or password.");

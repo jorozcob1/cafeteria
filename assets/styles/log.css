@@ -55,17 +55,17 @@ button:hover {
 
 /* Animación de entrada */
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  form {
+    padding: 15px;
   }
-}
-
-form {
-  animation: fadeIn 0.5s ease;
+  h1 {
+    font-size: 24px;
+  }
+  button {
+    font-size: 14px;
+  }
 }
